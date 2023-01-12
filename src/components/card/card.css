@@ -66,21 +66,23 @@
   font-size: 2.1rem;
   font-weight: 700;
   color: white;
-  /* text-decoration: transparent;
-  background: linear-gradient(to right, #93F6B0 0%, #6FE3E1 100%);
+  text-decoration: transparent;
+  /* background: linear-gradient(to right, #93F6B0 0%, #6FE3E1 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent; */
 }
 
-.card-body:hover{
+.card-body:hover {
   transform: translate(-5px, -5px)
   /* transform: translateX(-5px); */
 }
-.card-item:hover {
-  
-  box-shadow: 0px 3px 22px 0px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0px 3px 22px 0px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 3px 22px 0px rgba(0, 0, 0, 0.7);
+.card-body:hover .card-title{
+  text-decoration: transparent;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {
