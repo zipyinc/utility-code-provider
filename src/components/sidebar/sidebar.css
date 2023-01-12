@@ -1,14 +1,13 @@
 .sidebar {
-  margin: 0 1em;
-  padding: 2em 0;
+  margin: 0 3rem;
+  padding: 2rem 0;
 }
 .sidebar-header > span {
   font-weight: bold;
+  font-size: 2rem;
 }
 .sidebar-body {
-  margin: 1em 0;
-  margin-top: 2em;
-  padding: 1em 0;
+  margin-top: 3rem;
   background: linear-gradient(to right, #212e4b 0%, #405277 100%);
   border-radius: 5px;
 }
@@ -16,7 +15,7 @@
 .sidebar-body>.category {
   width: 100%;
   box-sizing: border-box;
-  padding: 1em;
+  padding: 1rem;
   display: grid;
 }
 .category > .category-option {
@@ -29,10 +28,9 @@
 	animation: gradient 5s ease infinite;
 }
 .category > .category-option > span {
-  font-size: 1.2em;
+  font-size: 2rem;
   display: block;
-  padding: 0.6em 0.4em;
-  /* border-radius: 5px; */
+  padding: 1rem 2rem;
   background: linear-gradient(to right, #212e4b 0%, #405277 100%);;
   transition: transform 0.3s;
 

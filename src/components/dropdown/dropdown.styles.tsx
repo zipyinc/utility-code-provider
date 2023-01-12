@@ -8,7 +8,7 @@ export const InputContainer = styled.div<InputContainerProps>`
     background-color: #34373e;
     // border-radius: 4px;
     // height: 40px;
-    width: 8em;
+    width: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +26,7 @@ interface InputProps {
 export const Input = styled.div<InputProps>`
 //    max-width: 100%;
    color: ${props => props.selected ? '#FFFFFF' : '#ACB0C1'};
-   font-family: Lato;
+//    font-family: Lato;
    font-size: 15px;
    font-weight: 500;
    letter-spacing: 0;
@@ -75,7 +75,7 @@ export const DropdownItem = styled.li<DropdownItemProps>`
     display: flex;
     align-items: center;
     color: ${props => props.noDataText ? '#ACB0C1' : '#FFFFFF'};
-    font-family: Lato;
+    // font-family: Lato;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0;
@@ -94,7 +94,7 @@ export const DropdownItem = styled.li<DropdownItemProps>`
 
 export const ErrorMessage = styled.div`
     color: #DA5B70;
-    font-family: Lato;
+    // font-family: Lato;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0;

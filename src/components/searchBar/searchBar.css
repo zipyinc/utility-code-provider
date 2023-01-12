@@ -1,23 +1,23 @@
 .search {
-  width: 60%;
+  width: 40%;
   margin: auto;
   background-color: #222535;
-  border-radius: 5em;
+  border-radius: 5rem;
   display: grid;
   grid-template-columns: 5% 95%;
-  padding: 1em 1em;
+  padding: 1rem 2rem;
 }
 .search > i {
   color: #acb0c1;
-  font-size: 2em;
+  font-size: 2rem;
 }
 .search > input {
   /* width: 100%; */
   background-color: #222535;
   color: #acb0c1;
-  /* border-radius: 5em; */
+  /* border-radius: 5rem; */
   border: none;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 .search:hover {

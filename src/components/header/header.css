@@ -2,11 +2,13 @@
     width: 100%;
     text-align: center;
     margin: auto;
+    margin-top: 10rem;
   }
   .header > span {
-    font-size: 2em;
+    font-size: 4rem;
     font-weight: bold;
   }
   .header > p{
+    font-size: 2rem;
     color: #aaa;
   }
