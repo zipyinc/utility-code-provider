@@ -1,0 +1,12 @@
+.header {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .header > span {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .header > p{
+    color: #aaa;
+  }

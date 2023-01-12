@@ -1,0 +1,27 @@
+.search {
+  width: 60%;
+  margin: auto;
+  background-color: #222535;
+  border-radius: 5em;
+  display: grid;
+  grid-template-columns: 5% 95%;
+  padding: 1em 1em;
+}
+.search > i {
+  color: #acb0c1;
+  font-size: 2em;
+}
+.search > input {
+  /* width: 100%; */
+  background-color: #222535;
+  color: #acb0c1;
+  /* border-radius: 5em; */
+  border: none;
+  font-size: 1.4em;
+}
+
+.search:hover {
+  box-shadow: 0px 3px 22px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 3px 22px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 3px 22px 0px rgba(0, 0, 0, 0.7);
+}

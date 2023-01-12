@@ -1,0 +1,28 @@
+body {
+  /* background-color: #32394b; */
+  /* background: url('./resorce/images/Hero\ Section.png'); */
+  background-image: url('./resource/images/Background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: #fff;
+}
+*:focus {
+  outline: none;
+}
+
+.App {
+  width: 80%;
+  margin: 3em auto;
+  /* background-image: url(./resorce/images/Background\ Ellipse.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%; */
+  /* border: 1px solid #000; */
+}
+.main {
+  margin-top: 5em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
