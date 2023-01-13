@@ -12,7 +12,7 @@ export const InputContainer = styled.div<InputContainerProps>`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 9px;
+    padding: 1px 9px;
     cursor: pointer;
     &:focus {
         outline: none !important;

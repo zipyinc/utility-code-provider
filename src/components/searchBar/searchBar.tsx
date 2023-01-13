@@ -18,8 +18,8 @@ const SearchBar = (props: any) => {
       <form>
         <div className="search-bar">
           <div className="search">
-            <i className="fa fa-search" aria-hidden="true"></i>
-            <input type='text' onChange={(e)=>searchQuery(e.target.value)} placeholder='Search...' />
+            <i className="fa fa-search search-icon" aria-hidden="true"></i>
+            <input className="fa fa-search"  type='text' onChange={(e)=>searchQuery(e.target.value)} placeholder='Search...' />
           </div>
         </div>
       </form>

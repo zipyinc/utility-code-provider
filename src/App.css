@@ -1,5 +1,6 @@
 html{
   font-size: 10px;
+  box-sizing: border-box;
 }
 body {
   /* background-color: #32394b; */
@@ -28,4 +29,49 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
+}
+
+@media (max-width:1450px) {
+  .App {
+    width: 100%;
+    margin: 6rem 0rem;
+  }
+  .main {
+   grid-template-columns: 20% 80%;
+   margin-top: 5rem;
+  }
+}
+
+@media (max-width:1125px) {
+  .App {
+    width: 100%;
+    margin: 6rem 0rem;
+  }
+  .main {
+   grid-template-columns: 30% 70%;
+   margin-top: 5rem;
+  }
+}
+
+@media (max-width:786px) {
+  .App {
+    width: 100%;
+    margin: 6rem 0rem;
+  }
+  .main {
+   grid-template-columns: 30% 70%;
+   margin-top: 5rem;
+  }
+}
+
+@media (max-width:605px) {
+  .main {
+   grid-template-columns: 40% 60%;
+  }
+}
+
+@media (max-width:450px) {
+  .main {
+   grid-template-columns: none;
+  }
 }
