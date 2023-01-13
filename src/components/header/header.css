@@ -12,3 +12,10 @@
     font-size: 2rem;
     color: #aaa;
   }
+
+  @media (max-width:786px) {
+    .header {
+      width: 90%;
+      margin-top: 6rem;
+  }
+  }
