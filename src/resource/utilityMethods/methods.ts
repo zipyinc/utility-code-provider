@@ -54,7 +54,7 @@ code["js"] = `function getMaskedEmailID(emailID) {
     }
     return email.join('');
   }`;
-code["go"] = `func GetMaskedEmailID(emailID string) string {
+code["go"] = `func getMaskedEmailID(emailID string) string {
     email := []rune(emailID)
     j := strings.Index(emailID, "@")
     for i := 1; i < j; i = i + 2 {
@@ -125,19 +125,19 @@ code["java"] = `/**
 * @param obj the object to check for nullness
 * @return true if the object is not null, false otherwise
 */
-public static boolean isValid(final Object obj) {
- return Objects.nonNull(obj);
-}
+public static boolean isValid(final Object objectValue) {
+    return Objects.nonNull(objectValue);
+  }
 public boolean isValid(Object obj) {
  return obj != null;
 }`;
-code["py"] = `def isValid(obj):
-return obj is not None`;
-code["js"] = `function isValid(obj) {
-    return typeof obj !== "undefined" && obj !== null;
+code["py"] = `def isValid(objectValue):
+return objectValue is not None`;
+code["js"] = `function isValid(objectValue) {
+    return typeof objectValue !== "undefined" && objectValue !== null;
   }`;
-code["go"] = `func isValid(obj interface{}) bool {
-    return obj != nil
+code["go"] = `func isValid(objectValue interface{}) bool {
+    return objectValue != nil
 }`;
 methodData["Null-Object-Checker"] = {
     "Name": "Null Object Checker",
@@ -178,7 +178,7 @@ code["js"] = `function isEmpty(str) {
       return false;
     }
   }`;
-code["go"] = `func IsEmpty(str string) bool {
+code["go"] = `func isEmpty(str string) bool {
     if str == "" || len(strings.TrimSpace(str)) == 0 {
             return true
     }
@@ -383,7 +383,7 @@ code["js"] = `exports.isValidMobile=function(inMobile){
       return false;
     }
   }`;
-code["go"] = `func IsValidMobile(inMobile string) bool {
+code["go"] = `func isValidMobile(inMobile string) bool {
     pattern := regexp.MustCompile("[6-9][0-9]{9}")
     matcher := pattern.MatchString(inMobile)
     if matcher {
@@ -482,10 +482,7 @@ code["js"] = `function arrayToStringWithComma(str) {
 }
 `;
 code["go"] = `func arrayToStringWithComma(str []string) string {
-    processedString := ""
-    processedString = strings.Replace(strings.Replace(strings.Replace(strings.Trim(fmt.Sprint(str), "[]"), "[", ""), "]", ""), " ", "", -1)
-    processedString = "," + processedString + ","
-    return processedString
+    return strings.Join(str, ",")
 }`;
 methodData["String-Combiner"] = {
     "Name": "String Combiner",
@@ -513,7 +510,7 @@ code["js"] = `function commaStringToArray(str) {
     var arrayOfString = str.split(', ');
     return arrayOfString;
 }`;
-code["go"] = `func CommaStringToArray(str string) []string {
+code["go"] = `func commaStringToArray(str string) []string {
     arrayOfString := strings.Split(str, ", ")
     return arrayOfString
 }`;
@@ -594,7 +591,7 @@ code["js"] = `exports.getCurrentFinancialYear=function(){
     }
 }`;
 code["go"] = `current month
-func GetCurrentFinancialYear() int {
+func getCurrentFinancialYear() int {
         currentMonth := time.Now().Month()
         currentYear := time.Now().Year()
         if currentMonth > 3 {
@@ -692,7 +689,7 @@ code["js"] = `    const getMonthName = (date) => {
     const month = new Date(date).getMonth();
     return months[month];
 }`;
-code["go"] = `func GetMonthName(date time.Time) string {
+code["go"] = `func getMonthName(date time.Time) string {
     months := []string{
             "January",
             "February",
@@ -747,7 +744,7 @@ code["js"] = `const getStartOfMonth = date => {
     calendar.setMilliseconds(0);
     return calendar;
     };`;
-code["go"] = `func GetStartOfMonth(date time.Time) time.Time{
+code["go"] = `func getStartOfMonth(date time.Time) time.Time{
     date = date.AddDate(0, 0, -date.Day() + 1)
     date = date.Truncate(time.Hour * 24)
     return date
@@ -782,7 +779,7 @@ code["js"] = ` function setCurrentTimeInCalenderObject(inCal) {
     inCal.setSeconds(cal.getSeconds());
     inCal.setMilliseconds(cal.getMilliseconds());
 }`;
-code["go"] = `func SetCurrentTimeInCalenderObject(inCal *time.Time) {
+code["go"] = `func setCurrentTimeInCalenderObject(inCal *time.Time) {
     now := time.Now()
     inCal.SetHour(now.Hour())
     inCal.SetMinute(now.Minute())
@@ -836,7 +833,7 @@ code["js"] = ` function getDateFromStringType(inDate,inFormat) {
     }
     return cal;
 }`;
-code["go"] = `func GetDateFromStringType(inDate, inFormat string) *time.Time {
+code["go"] = `func getDateFromStringType(inDate, inFormat string) *time.Time {
     cal := time.Now()
     if len(inDate) == 0 {
             return nil
@@ -983,7 +980,7 @@ const diff = (startDate, endDate) => {
     const diffInMilliseconds = endDate.getTime() - startDate.getTime();
     return Math.floor(diffInMilliseconds / 60000);
 }`;
-code["go"] = `func DifferenceInMinutes(startDate, endDate time.Time) int64 {
+code["go"] = `func differenceInMinutes(startDate, endDate time.Time) int64 {
     minDiff := int64(0)
     diff := int64(0)
     diff = endDate.Unix() - startDate.Unix()
@@ -1006,7 +1003,7 @@ code["java"] = `/**
 * @param endDate The end date.
 * @return The difference between two dates in days.
 */        
-public static long dfferenceInDays(final Date startDate,final Date endDate) {
+public static long differenceInDays(final Date startDate,final Date endDate) {
                long dayDiff = 0;
                long diff = 0;
                try {
@@ -1022,7 +1019,7 @@ code["py"] = `def dateDifferenceInDays(startDate, endDate):
     end_datetime = datetime.strptime(endDate, "%Y-%m-%d %H:%M:%S")
     diff = end_datetime - start_datetime
     return diff.days`;
-code["js"] = `function dfferenceInDays(startDate,endDate)
+code["js"] = `function differenceInDays(startDate,endDate)
 {
     let dayDiff = 0;
     let diff = 0;
@@ -1154,18 +1151,20 @@ finally:
 return ip
 
 print(get_host_ip())`;
-code["js"] = `var os = require('os');
-
-var interfaces = os.networkInterfaces();
-var addresses = [];
-for (var k in interfaces) {
-    for (var k2 in interfaces[k]) {
-        var address = interfaces[k][k2];
-        if (address.family === 'IPv4' && !address.internal) {
-            addresses.push(address.address);
+code["js"] = `function getIPv4Addresses() {
+    var os = require('os');
+    var interfaces = os.networkInterfaces();
+    var addresses = [];
+    for (var k in interfaces) {
+        for (var k2 in interfaces[k]) {
+            var address = interfaces[k][k2];
+            if (address.family === 'IPv4' && !address.internal) {
+                addresses.push(address.address);
+            }
         }
     }
-}`;
+    return addresses;
+  }`;
 code["go"] = `func getServerIP() string {
     ip, err := net.LookupIP("localhost")
     if err != nil {
@@ -1482,7 +1481,7 @@ code["js"] = `const formatCurrency = (amount, currencyCode) => {
       currency: currencyCode
     }).format(amount);
   };`;
-code["go"] = `func FormatCurrency(amount float64, currencyCode string) string {
+code["go"] = `func formatCurrency(amount float64, currencyCode string) string {
     locale := fmt.Sprintf("en_%s", currencyCode)
     currencyFormatter, _ := number.NewNumberFormatter(locale, number.Currency)
     return currencyFormatter.Format(amount)
@@ -1575,21 +1574,25 @@ code["go"] = `  func getCurrencyInIndianFormat(amount string) string {
     amountArray := []rune(strings.TrimSpace(amount))
     thousandsCounter, lacsCounter := 0, 0
     for i := len(amountArray) - 1; i >= 0; i-- {
-        if thousandsCounter < 3 {
-            stringBuilder.WriteRune(amountArray[i])
-            thousandsCounter++
-        } else if lacsCounter < 2 {
-            if lacsCounter == 0 {
-                stringBuilder.WriteString(",")
-                stringBuilder.WriteRune(amountArray[i])
-                lacsCounter++
-            } else {
-                stringBuilder.WriteRune(amountArray[i])
-                lacsCounter = 0
+            if thousandsCounter < 3 {
+                    stringBuilder.WriteRune(amountArray[i])
+                    thousandsCounter++
+            } else if lacsCounter < 2 {
+                    if lacsCounter == 0 {
+                            stringBuilder.WriteString(",")
+                            stringBuilder.WriteRune(amountArray[i])
+                            lacsCounter++
+                    } else {
+                            stringBuilder.WriteRune(amountArray[i])
+                            lacsCounter = 0
+                    }
             }
-        }
     }
-    return stringBuilder.String()
+    runes := []rune(stringBuilder.String())
+    for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+            runes[i], runes[j] = runes[j], runes[i]
+    }
+    return string(runes)
 }`;
 methodData["Indian-Currency-Formatter"] = {
     "Name": "Indian Currency Formatter",
@@ -1632,7 +1635,7 @@ function isFileSizeValid(filePath, maxFileSize) {
         return file.size <= maxFileSize;
 }`;
 code["go"] = `
-func IsFileSizeValid(filePath string, maxFileSize int64) bool {
+func isFileSizeValid(filePath string, maxFileSize int64) bool {
     file, err := os.Open(filePath)
     if err != nil {
         return false
