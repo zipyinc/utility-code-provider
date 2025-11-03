@@ -1,0 +1,36 @@
+/**
+ * Utility Function: Add Two Numbers
+ * 
+ * Purpose: This function takes two numeric parameters and returns their sum.
+ * 
+ * @param {number} a - The first number to add
+ * @param {number} b - The second number to add
+ * @returns {number} The sum of a and b
+ * 
+ * Usage Example:
+ *   const result = addNumbers(5, 3);
+ *   console.log(result); // Output: 8
+ * 
+ * Created: 2025-11-03
+ * Reason: Added utility function for basic arithmetic addition operation
+ *         to support common mathematical operations in the application.
+ */
+function addNumbers(a, b) {
+  // Validate inputs to ensure they are numbers
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new TypeError('Both arguments must be numbers');
+  }
+  
+  // Return the sum of the two numbers
+  return a + b;
+}
+
+// Export for use in other modules (if using module system)
+// module.exports = addNumbers;
+
+// Example usage and test cases:
+console.log('Testing addNumbers utility:');
+console.log('5 + 3 =', addNumbers(5, 3));        // Expected: 8
+console.log('10 + 20 =', addNumbers(10, 20));    // Expected: 30
+console.log('-5 + 5 =', addNumbers(-5, 5));      // Expected: 0
+console.log('0.1 + 0.2 =', addNumbers(0.1, 0.2)); // Expected: 0.30000000000000004
